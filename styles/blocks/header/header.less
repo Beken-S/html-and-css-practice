@@ -1,6 +1,6 @@
 .header {
+    color: #ffffff;
     background-color: #212122;
-    color: #fff;
 
     &__content {
         display: flex;
@@ -30,17 +30,17 @@
 @icons: search, profile, menu;
 
 .header-button-icon {
-    background: none;
-    border: 0;
     width: 30px;
     height: 30px;
-    color: #fff;
+    color: #ffffff;
+    background: none;
+    border: 0;
 
     each(@icons, {
         &_@{value} {
             background-image: url('@{value}.svg');
         }
-    })
+    });
 }
 
 @media @screen-gt-s {
@@ -52,16 +52,16 @@
 .header-button {
     box-sizing: border-box;
     height: 38px;
-    background: none;
-    color: #fff;
-    border: 1px solid fade(#ccc, 50%);
-    border-radius: 19px;
     padding: 0 20px;
-    font: 14px/36px Arial, sans-serif;
+    color: #ffffff;
+    font: 14px/36px 'Arial', sans-serif;
+    background: none;
+    border: 1px solid fade(#cccccc, 50%);
+    border-radius: 19px;
     cursor: pointer;
 
     &:hover {
-        border-color: #fff;
+        border-color: #ffffff;
     }
 
     &_profile {

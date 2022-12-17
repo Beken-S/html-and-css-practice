@@ -1,9 +1,9 @@
 .product-card {
     display: block;
     max-width: 290px;
-    text-align: center;
     margin-bottom: 30px;
     color: inherit;
+    text-align: center;
     text-decoration: none;
 
     &__image-container {
@@ -16,27 +16,27 @@
     }
 
     &__old-price {
-        color: #AEB5B9;
-        text-decoration: line-through;
         margin-right: 10px;
+        color: #aeb5b9;
+        text-decoration: line-through;
     }
 
     &__sale {
-        width: 30px;
-        height: $width;
-        background-color: #212122;
-        border-radius: 50%;
-        color: #fff;
-        font: 12px/$width @font-family-heading;
         position: absolute;
         top: 10px;
         left: 10px;
+        width: 30px;
+        height: $width;
+        color: #ffffff;
+        font: 12px / $width @font-family-heading;
+        background-color: #212122;
+        border-radius: 50%;
 
         @media @screen-gt-s {
             width: 40px;
             height: $width;
-            line-height: $width;
             font-size: 14px;
+            line-height: $width;
         }
     }
 }
