@@ -1,6 +1,6 @@
 .header {
-    color: #ffffff;
-    background-color: #212122;
+    color: @color-text-contrast;
+    background-color: @color-primary;
 
     &__content {
         display: flex;
@@ -32,7 +32,7 @@
 .header-button-icon {
     width: 30px;
     height: 30px;
-    color: #ffffff;
+    color: inherit;
     background: none;
     border: 0;
 
@@ -53,15 +53,15 @@
     box-sizing: border-box;
     height: 38px;
     padding: 0 20px;
-    color: #ffffff;
-    font: 14px/36px 'Arial', sans-serif;
+    color: inherit;
+    line-height: 36px;
     background: none;
-    border: 1px solid fade(#cccccc, 50%);
+    border: 1px solid fade(@color-neutral-dark-1, 50%);
     border-radius: 19px;
     cursor: pointer;
 
     &:hover {
-        border-color: #ffffff;
+        border-color: @color-text-contrast;
     }
 
     &_profile {

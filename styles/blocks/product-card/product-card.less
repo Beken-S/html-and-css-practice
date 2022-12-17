@@ -17,7 +17,7 @@
 
     &__old-price {
         margin-right: 10px;
-        color: #aeb5b9;
+        color: @color-placeholder;
         text-decoration: line-through;
     }
 
@@ -27,9 +27,9 @@
         left: 10px;
         width: 30px;
         height: $width;
-        color: #ffffff;
-        font: 12px / $width @font-family-heading;
-        background-color: #212122;
+        color: @color-text-contrast;
+        font: @font-weight-bold 12px / $width @font-family-heading;
+        background-color: @color-primary;
         border-radius: 50%;
 
         @media @screen-gt-s {
