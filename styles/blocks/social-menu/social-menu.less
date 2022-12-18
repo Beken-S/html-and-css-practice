@@ -1,0 +1,32 @@
+@social-menu-icons: facebook, twitter, vk, instagram;
+
+.social-menu {
+    margin-bottom: 30px;
+
+    @media @screen-gt-s {
+        margin-bottom: 0;
+    }
+
+    &__link {
+        display: block;
+        box-sizing: border-box;
+        width: 36px;
+        height: $width;
+        border: 1px solid @color-neutral-dark-1;
+        border-radius: 50%;
+
+        &:hover,
+        &:focus {
+            border-color: @color-text-contrast;
+            outline: none;
+        }
+
+        each(@social-menu-icons, {
+            &_icon_@{value} {
+                background-image: url('@{value}.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        });
+    }
+}
