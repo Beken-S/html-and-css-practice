@@ -1,0 +1,26 @@
+@app-menu-icons: app-store, google-play;
+
+.app-menu {
+    &__link {
+        display: block;
+        box-sizing: border-box;
+        width: 140px;
+        height: 40px;
+        border: 1px solid @color-neutral-dark-1;
+        border-radius: 1px;
+
+        &:hover,
+        &:focus {
+            border-color: @color-text-contrast;
+            outline: none;
+        }
+
+        each(@app-menu-icons, {
+            &_icon_@{value} {
+                background-image: url('@{value}.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        });
+    }
+}
