@@ -1,19 +1,28 @@
 .menu {
-    display: none;
+    display: flex;
     margin: 0;
     padding: 0;
-    font-size: @font-size-text-large;
     list-style: none;
 
-    @media @screen-gt-s {
-        display: flex;
+    &__item_gap_m {
+        &:not(:last-child) {
+            margin-right: 20px;
+
+            @media @screen-gt-m {
+                margin-right: 30px;
+            }
+        }
     }
 
-    &__item {
-        margin-left: 20px;
+    &__item_gap_s {
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+    }
 
-        @media @screen-gt-m {
-            margin-left: 30px;
+    &__item_gap_xs {
+        &:not(:last-child) {
+            margin-right: 8px;
         }
     }
 
@@ -23,8 +32,24 @@
 
         &:hover,
         &:focus {
-            color: @color-secondary-light-2;
+            color: @color-secondary-dark;
             outline: none;
         }
+    }
+}
+
+.menu_hidden-s {
+    display: none;
+
+    @media @screen-gt-s {
+        display: flex;
+    }
+}
+
+.menu_direction_column-s {
+    flex-direction: column;
+
+    @media @screen-gt-s {
+        flex-direction: row;
     }
 }
