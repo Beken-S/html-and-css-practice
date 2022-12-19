@@ -240,10 +240,23 @@ body {
   }
 }
 
+.app-menu__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.app-menu__item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .app-menu__link {
   box-sizing: border-box;
   width: 140px;
   height: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
   border: 1px solid #ccc;
   border-radius: 1px;
   display: block;
@@ -256,14 +269,10 @@ body {
 
 .app-menu__link_icon_app-store {
   background-image: url("app-store.eeb1f428.svg");
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .app-menu__link_icon_google-play {
   background-image: url("google-play.30619e1a.svg");
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .footer {
@@ -421,6 +430,16 @@ body {
   margin: 0;
 }
 
+.link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.link:hover, .link:focus {
+  color: #3781d0;
+  outline: none;
+}
+
 .logo {
   width: 42px;
   height: 42px;
@@ -446,32 +465,14 @@ body {
   display: flex;
 }
 
-.menu__item_gap_m:not(:last-child) {
+.menu__item:not(:last-child) {
   margin-right: 20px;
 }
 
 @media (min-width: 1000px) {
-  .menu__item_gap_m:not(:last-child) {
+  .menu__item:not(:last-child) {
     margin-right: 30px;
   }
-}
-
-.menu__item_gap_s:not(:last-child) {
-  margin-right: 15px;
-}
-
-.menu__item_gap_xs:not(:last-child) {
-  margin-right: 8px;
-}
-
-.menu__link {
-  color: inherit;
-  text-decoration: none;
-}
-
-.menu__link:hover, .menu__link:focus {
-  color: #3781d0;
-  outline: none;
 }
 
 .menu_hidden-s {
@@ -481,16 +482,6 @@ body {
 @media (min-width: 768px) {
   .menu_hidden-s {
     display: flex;
-  }
-}
-
-.menu_direction_column-s {
-  flex-direction: column;
-}
-
-@media (min-width: 768px) {
-  .menu_direction_column-s {
-    flex-direction: row;
   }
 }
 
@@ -563,15 +554,43 @@ body {
   }
 }
 
+.services-menu__list {
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .services-menu__list {
+    flex-direction: row;
+  }
+}
+
 .services-menu__item {
+  min-height: 40px;
+  background-position: 0;
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
   flex: none;
   align-items: center;
+  padding-left: 60px;
   display: flex;
 }
 
 @media (min-width: 768px) {
   .services-menu__item {
     flex: 210px;
+    padding-left: 50px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .services-menu__item {
+    min-height: 50px;
+    background-size: 50px 50px;
+    padding-left: 80px;
   }
 }
 
@@ -587,72 +606,15 @@ body {
 }
 
 .services-menu__item_icon_support {
-  min-height: 40px;
   background-image: url("support.ade3685a.svg");
-  background-position: 0;
-  background-repeat: no-repeat;
-  background-size: 40px 40px;
-  padding-left: 60px;
-}
-
-@media (min-width: 768px) {
-  .services-menu__item_icon_support {
-    padding-left: 50px;
-  }
-}
-
-@media (min-width: 1000px) {
-  .services-menu__item_icon_support {
-    min-height: 50px;
-    background-size: 50px 50px;
-    padding-left: 80px;
-  }
 }
 
 .services-menu__item_icon_return {
-  min-height: 40px;
   background-image: url("return.8b94c17f.svg");
-  background-position: 0;
-  background-repeat: no-repeat;
-  background-size: 40px 40px;
-  padding-left: 60px;
-}
-
-@media (min-width: 768px) {
-  .services-menu__item_icon_return {
-    padding-left: 50px;
-  }
-}
-
-@media (min-width: 1000px) {
-  .services-menu__item_icon_return {
-    min-height: 50px;
-    background-size: 50px 50px;
-    padding-left: 80px;
-  }
 }
 
 .services-menu__item_icon_delivery {
-  min-height: 40px;
   background-image: url("delivery.748fa7e6.svg");
-  background-position: 0;
-  background-repeat: no-repeat;
-  background-size: 40px 40px;
-  padding-left: 60px;
-}
-
-@media (min-width: 768px) {
-  .services-menu__item_icon_delivery {
-    padding-left: 50px;
-  }
-}
-
-@media (min-width: 1000px) {
-  .services-menu__item_icon_delivery {
-    min-height: 50px;
-    background-size: 50px 50px;
-    padding-left: 80px;
-  }
 }
 
 .social-menu {
@@ -663,6 +625,17 @@ body {
   .social-menu {
     margin-bottom: 0;
   }
+}
+
+.social-menu__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.social-menu__item:not(:last-child) {
+  margin-right: 15px;
 }
 
 .social-menu__link {
