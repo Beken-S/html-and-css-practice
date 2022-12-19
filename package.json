@@ -10,6 +10,7 @@
     "deploy": "yarn build && gh-pages -d dist",
     "lint": "yarn stylelint styles/**/*.less --custom-syntax postcss-less"
   },
+  "browserslist": ">0.5%, last 2 versions, Firefox ESR, not dead, ie 10-11",
   "devDependencies": {
     "@parcel/transformer-less": "^2.8.0",
     "gh-pages": "^3.2.3",
