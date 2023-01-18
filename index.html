@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width" />
         <title>HTML и CSS</title>
-        <link rel="stylesheet" href="styles/styles.less"/>
+        <link rel="stylesheet" href="styles/styles.less" />
     </head>
     <body>
         <header class="header">
             <div class="column-wrapper">
                 <div class="header__content">
                     <div class="header__logo">
-                        <a href="/"><img class="logo" src="styles/blocks/logo/logo.svg" alt="hh.ru" ></a>
+                        <a href="/"><img class="logo" src="styles/blocks/logo/logo.svg" alt="hh.ru" /></a>
                     </div>
                     <nav class="header__menu">
-                        <ul class="menu">
+                        <ul class="menu menu_hidden-s">
                             <li class="menu__item">
-                                <a class="menu__link" href="#">Одежда</a>
+                                <a class="link" href="#">Одежда</a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="#">Сумки</a>
+                                <a class="link" href="#">Сумки</a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="#">Аксессуары</a>
+                                <a class="link" href="#">Аксессуары</a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="#">Офисные принадлежности</a>
+                                <a class="link" href="#">Офисные принадлежности</a>
                             </li>
                         </ul>
                     </nav>
@@ -114,7 +114,98 @@
                 </div>
             </div>
         </section>
-
+        <nav class="services-menu" aria-label="Услуги">
+            <div class="column-wrapper">
+                <ul class="services-menu__list">
+                    <li class="services-menu__item services-menu__item_icon_support">
+                        <a class="link" href="#">Круглосуточная служба поддержки</a>
+                    </li>
+                    <li class="services-menu__item services-menu__item_icon_return">
+                        <a class="link" href="#">100% гарантия возврата и&nbsp;подлинность товара</a>
+                    </li>
+                    <li class="services-menu__item services-menu__item_icon_delivery">
+                        <a class="link" href="#">Быстрая доставка по&nbsp;всей России</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <footer class="footer">
+            <div class="column-wrapper">
+                <div class="footer__top">
+                    <div class="column-row">
+                        <div class="column column_s-2 column_m-3 column_l-4">
+                            <section class="social-menu" aria-label="Социальные сети">
+                                <ul class="social-menu__list">
+                                    <li class="social-menu__item">
+                                        <a
+                                            class="social-menu__link social-menu__link_icon_facebook"
+                                            href="#"
+                                            aria-label="Facebook"
+                                        ></a>
+                                    </li>
+                                    <li class="social-menu__item">
+                                        <a
+                                            class="social-menu__link social-menu__link_icon_twitter"
+                                            href="#"
+                                            aria-label="Twitter"
+                                        ></a>
+                                    </li>
+                                    <li class="social-menu__item">
+                                        <a
+                                            class="social-menu__link social-menu__link_icon_vk"
+                                            href="#"
+                                            aria-label="VK"
+                                        ></a>
+                                    </li>
+                                    <li class="social-menu__item">
+                                        <a
+                                            class="social-menu__link social-menu__link_icon_instagram"
+                                            href="#"
+                                            aria-label="Instagram"
+                                        ></a>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                        <div class="column column_s-2 column_m-3 column_l-4">
+                            <div class="footer__app-menu">
+                                <section class="app-menu" aria-label="Мобильные приложения">
+                                    <ul class="app-menu__list">
+                                        <li class="app-menu__item">
+                                            <a
+                                                class="app-menu__link app-menu__link_icon_app-store"
+                                                href="#"
+                                                aria-label="App Store"
+                                            ></a>
+                                        </li>
+                                        <li class="app-menu__item">
+                                            <a
+                                                class="app-menu__link app-menu__link_icon_google-play"
+                                                href="#"
+                                                aria-label="Google Play"
+                                            ></a>
+                                        </li>
+                                    </ul>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="column column_s-2 column_m-3 column_l-4">
+                            <div class="footer__logo">
+                                <a href="/"
+                                    ><img class="logo logo_size_s" src="styles/blocks/logo/logo-pale.svg" alt="hh.ru"
+                                /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="line" />
+                <div class="footer__bottom">
+                    &copy;&nbsp;2019 Группа компаний HeadHunter <br />
+                    Сегодня на&nbsp;сайте 684&nbsp;978&nbsp;вакансий, 34&nbsp;789&nbsp;747&nbsp;резюме,
+                    858&nbsp;923&nbsp;компании и&nbsp;за&nbsp;неделю 1&nbsp;211&nbsp;363&nbsp;приглашения
+                </div>
+            </div>
+        </footer>
         <script src="js/grid.js"></script>
     </body>
 </html>

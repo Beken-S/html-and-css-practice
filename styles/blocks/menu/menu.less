@@ -1,31 +1,24 @@
 .menu {
-    list-style: none;
-    color: #fff;
+    display: flex;
     margin: 0;
     padding: 0;
-    font-size: 16px;
+    list-style: none;
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 20px;
+
+            @media @screen-gt-m {
+                margin-right: 30px;
+            }
+        }
+    }
+}
+
+.menu_hidden-s {
     display: none;
 
     @media @screen-gt-s {
         display: flex;
-    }
-
-    &__item {
-        margin-left: 20px;
-
-        @media @screen-gt-m {
-            margin-left: 30px;
-        }
-    }
-
-    &__link {
-        color: #fff;
-        text-decoration: none;
-
-        &:hover,
-        &:focus {
-            color: #C52929;
-            outline: none;
-        }
     }
 }

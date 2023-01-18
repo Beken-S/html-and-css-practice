@@ -1,6 +1,6 @@
 .header {
-    background-color: #212122;
-    color: #fff;
+    color: @color-text-contrast;
+    background-color: @color-primary;
 
     &__content {
         display: flex;
@@ -20,6 +20,15 @@
         margin-left: 20px;
     }
 
+    &__menu {
+        margin-left: 20px;
+        font-size: @font-size-text-large;
+
+        @media @screen-gt-m {
+            margin-right: 30px;
+        }
+    }
+
     @media @screen-gt-s {
         &__button_menu {
             display: none;
@@ -30,17 +39,17 @@
 @icons: search, profile, menu;
 
 .header-button-icon {
-    background: none;
-    border: 0;
     width: 30px;
     height: 30px;
-    color: #fff;
+    color: inherit;
+    background: none;
+    border: 0;
 
     each(@icons, {
         &_@{value} {
             background-image: url('@{value}.svg');
         }
-    })
+    });
 }
 
 @media @screen-gt-s {
@@ -52,16 +61,16 @@
 .header-button {
     box-sizing: border-box;
     height: 38px;
-    background: none;
-    color: #fff;
-    border: 1px solid fade(#ccc, 50%);
-    border-radius: 19px;
     padding: 0 20px;
-    font: 14px/36px Arial, sans-serif;
+    color: inherit;
+    line-height: 36px;
+    background: none;
+    border: 1px solid fade(@color-neutral-dark-1, 50%);
+    border-radius: 19px;
     cursor: pointer;
 
     &:hover {
-        border-color: #fff;
+        border-color: @color-text-contrast;
     }
 
     &_profile {

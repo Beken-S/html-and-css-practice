@@ -1,0 +1,40 @@
+@app-menu-icons: app-store, google-play;
+
+.app-menu {
+    &__list {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+    }
+
+    &__link {
+        display: block;
+        box-sizing: border-box;
+        width: 140px;
+        height: 40px;
+        background-repeat: no-repeat;
+        background-position: center;
+        border: 1px solid @color-neutral-dark-1;
+        border-radius: 1px;
+
+        &:hover,
+        &:focus {
+            border-color: @color-text-contrast;
+            outline: none;
+        }
+
+        each(@app-menu-icons, {
+            &_icon_@{value} {
+                background-image: url('@{value}.svg');
+
+            }
+        });
+    }
+}
